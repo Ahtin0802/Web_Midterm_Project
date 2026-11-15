@@ -1,0 +1,330 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'MyCustomHandwriting'; 
+  src: url('fonts/ChenYuluoyan-Thin-Monospaced.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  size-adjust: 135%;
+}
+
+body {
+  font-family: 'MyCustomHandwriting', 'Noto Sans TC', sans-serif;
+  background-color: #faf6f0; /* 手繪粗糙畫紙/淡奶油色背景 */
+  color: #4a3c31;            /* 深褐色鉛筆線條，避免黑色過於死板 */
+  font-size: 19px;
+  line-height: 2.2;          /* 大幅加寬行距，手寫字不擠壓 */
+  letter-spacing: 2px;       /* 增加字距，讓字體更舒展好讀 */
+}
+
+/* 頂部極細 dotted 分隔線與簡約手寫導覽 */
+header {
+  max-width: 1150px;
+  margin: 0 auto 30px auto;
+  border-bottom: 2.5px dotted #a89f91; /* dotted dash 手繪風虛線 */
+  padding: 20px 20px 15px 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* 拿掉生硬按鈕，改為自然手寫風 A 連結 */
+.brand-title {
+  font-size: 2.3rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #c85a3c; /* 溫暖的磚紅褐色 */
+  display: inline-flex;
+  align-items: center;
+}
+
+.brand-sub {
+  font-size: 0.95rem;
+  background-color: #ffd8cc;
+  color: #4a3c31;
+  padding: 3px 10px;
+  border: 3px solid #4a3c31; /* 鉛筆粗邊框 */
+  border-radius: 12px 6px 15px 5px / 6px 15px 5px 12px;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+/* 圓潤可愛的手寫按鈕導覽 */
+.nav-link, .hand-btn {
+  display: inline-block;
+  font-family: inherit;      
+  letter-spacing: inherit;   
+  text-decoration: none;
+  color: #4a3c31;
+  background-color: #fff2cc;
+  padding: 6px 20px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: 4px solid #4a3c31;
+  border-radius: 40px 15px 45px 15px / 15px 40px 15px 45px;
+  box-shadow: 0 4px 0 #4a3c31;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.nav-link:hover, .hand-btn:hover {
+  transform: translateY(-2px) rotate(-1.5deg);
+  background-color: #ffe066;
+  box-shadow: 0 6px 0 #4a3c31;
+}
+
+.nav-link:active, .hand-btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #4a3c31;
+}
+
+/* 主要內容區 */
+main {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 標題與裝飾 */
+h2 {
+  font-size: 2rem;
+  margin: 0 auto 24px auto;
+  color: #385a64;
+  text-align: center;
+   align-self: center;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 6px;
+  background-color: #ffd8cc;
+  border-radius: 3px;
+  margin-top: 4px;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  color: #4a3c31;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 24px;
+  line-height: 2.2;
+}
+
+li {
+  font-size: 1.2rem;
+  margin-bottom: 18px;
+  line-height: 2.2;
+}
+
+/* 手繪大橫幅 Banner */
+.hero-box {
+  background-color: #f6f0ea; /* 柔和自然手繪淡褐背景 */
+  padding: 40px;
+  margin-bottom: 40px;
+  border: 4px solid #4a3c31;
+  border-radius: 45px 20px 40px 25px / 20px 45px 20px 40px;
+  box-shadow: 0 5px 0 #4a3c31;
+  text-align: center; /* 改為更親民的置中感，與 Title 連接 */
+}
+
+.hero-title-large {
+  font-size: 3rem;
+  color: #c85a3c;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: #4a3c31;
+  margin-bottom: 20px;
+}
+
+.hero-img {
+  width: 320px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 25px auto 10px auto; /* 置中大插圖 */
+}
+
+/* 2x2 不規則泡泡網格 */
+.grid-2x2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin: 35px 0;
+}
+
+/* 泡泡框 card 卡片 */
+.sketch-box {
+  padding: 30px 25px;
+  border: 4px solid #4a3c31;
+  border-radius: 40px 15px 45px 15px / 15px 40px 15px 45px; /* 泡泡圓角 */
+  box-shadow: 0 5px 0 #4a3c31;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* 便條紙配色，100% 呼應 image_1.png 的溫馨粉彩 */
+.grid-2x2 .sketch-box:nth-child(1) { background-color: #fef1f1; } /* 柔和淡粉 */
+.grid-2x2 .sketch-box:nth-child(2) { background-color: #f1f7f5; } /* 柔和淡綠 */
+.grid-2x2 .sketch-box:nth-child(3) { background-color: #fef9e7; } /* 柔和淡黃 */
+.grid-2x2 .sketch-box:nth-child(4) { background-color: #fbf0f6; } /* 柔和淡紫 */
+
+.sketch-box:hover {
+  transform: translateY(-3px) rotate(-1deg);
+  box-shadow: 0 8px 0 #4a3c31;
+}
+
+/* 卡片內的手繪小插圖與內文左右排版，與 image_1.png 完美呼應 */
+.card-content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  text-align: left;
+}
+
+.card-text {
+  flex: 1;
+}
+
+.card-img {
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* 表格樣式：同樣套用 100% 手繪外型 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 30px 0;
+  background-color: #ffffff;
+  border: 4px solid #4a3c31;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+th, td {
+  border: 3px solid #4a3c31;
+  padding: 16px 20px;
+  text-align: left;
+  line-height: 2.0;
+}
+
+th {
+  background-color: #e2f0d9; /* 溫馨淡綠 */
+  color: #4a3c31;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+td {
+  font-size: 1.25rem;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #fcfbf8;
+}
+
+tbody tr:hover {
+  background-color: #fff2cc;
+}
+
+/* 彩色小標籤 / 地圖按鈕 */
+td a, li a {
+  display: inline-block;
+  background-color: #ffd8cc;
+  color: #4a3c31;
+  padding: 2px 12px;
+  border: 3px solid #4a3c31;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.15rem;
+}
+
+td a:hover, li a:hover {
+  background-color: #ffbeaa;
+  transform: rotate(-1.5deg);
+}
+
+/* 清單 bullet 手繪感 */
+ul, ol {
+  margin-left: 30px;
+  margin-bottom: 25px;
+}
+
+li strong {
+  background-color: #ffebeb;
+  padding: 2px 8px;
+  border-radius: 8px;
+  border-bottom: 2px solid #4a3c31;
+}
+
+/* 輸入框 */
+input[type="number"] {
+  padding: 10px 16px;
+  border: 3px solid #4a3c31;
+  border-radius: 16px 8px 16px 5px / 8px 16px 5px 12px;
+  background-color: #ffffff;
+  font-size: 1.2rem;
+  font-family: inherit;
+  margin: 10px 0 20px 0;
+  width: 100%;
+  max-width: 280px;
+}
+
+/* 頁尾 */
+footer {
+  border-top: 2.5px dotted #a89f91;
+  margin-top: 60px;
+  padding: 30px 20px;
+  text-align: center;
+  background-color: #faf6f0;
+}
+
+/* 手機版調整 */
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: center;
+  }
+  .grid-2x2 {
+    grid-template-columns: 1fr;
+  }
+  .card-content-wrapper {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  th, td {
+    padding: 12px;
+    font-size: 1.1rem;
+  }
+}

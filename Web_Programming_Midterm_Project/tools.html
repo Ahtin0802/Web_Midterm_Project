@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>北科大生存指南 | 生存工具箱</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div>
+        <a href="index.html" class="brand-title">北科大生存指南</a>
+        <span class="brand-sub">NTUT SURVIVAL GUIDE</span>
+      </div>
+      <nav>
+        <a href="index.html" class="nav-link">首頁總覽</a>
+        <a href="food.html" class="nav-link">美食地圖</a>
+        <a href="courses.html" class="nav-link">選課攻略</a>
+        <a href="tools.html" class="nav-link">生存工具箱</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-box">
+      <div class="hero-title-large">生存互動工具箱</div>
+      <div class="hero-subtitle">月末餐費計算機・大學生存屬性測驗</div>
+      <p style="margin: 0 auto; max-width: 800px;">算算看這個月每餐還能花多少錢，順便測驗看看你在北科屬於哪一種生存流派！</p>
+    </section>
+
+    <section class="sketch-box" style="margin-bottom: 35px; background-color: #fef9e7;">
+      <h2>工具一：月末餐費生存計算機</h2>
+      <div class="card-content-wrapper">
+        <div class="card-text">
+          <p style="margin-bottom: 15px;">輸入你目前剩下的生活費與距離領錢的天數（每天以三餐計算）：</p>
+          
+          <div>
+            <label for="moneyInput"><strong>剩餘生活費（元）：</strong></label><br>
+            <input type="number" id="moneyInput" placeholder="例如：1500">
+          </div>
+          <div>
+            <label for="daysInput"><strong>距離領錢天數（天）：</strong></label><br>
+            <input type="number" id="daysInput" placeholder="例如：10">
+          </div>
+          
+          <button id="calcBtn" class="hand-btn">計算每餐預算</button>
+          <p id="budgetResult" style="margin-top: 20px; font-weight: bold; font-size: 1.35rem;"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sketch-box" style="background-color: #fbf0f6;">
+      <h2>工具二：你的大學生存屬性測驗</h2>
+      <div class="card-content-wrapper">
+        <div class="card-text">
+          <p style="margin-bottom: 16px;"><strong>問題：星期五下午突然停課，你會選擇做什麼？</strong></p>
+          
+          <div style="display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 20px;">
+            <button class="hand-btn quiz-btn" data-type="club">A. 衝去社團練團或找朋友吃飯</button>
+            <button class="hand-btn quiz-btn" data-type="study">B. 去圖書館把下週作業寫完</button>
+            <button class="hand-btn quiz-btn" data-type="sleep">C. 回宿舍直接睡到晚餐時間</button>
+          </div>
+
+          <div id="quizResultBox" style="display: none; background-color: #ffffff; padding: 20px; border-radius: 20px; border: 3px dashed #4a3c31;">
+            <h3 id="quizTitle"></h3>
+            <p id="quizDesc" style="margin-bottom: 0;"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 北科大生存指南 | 國立臺北科技大學 學生自製手寫手札資訊站</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
