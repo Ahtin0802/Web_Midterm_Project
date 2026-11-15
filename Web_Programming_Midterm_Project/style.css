@@ -14,8 +14,8 @@
 
 body {
   font-family: 'MyCustomHandwriting', 'Noto Sans TC', sans-serif;
-  background-color: #faf6f0; /* 手繪粗糙畫紙/淡奶油色背景 */
-  color: #4a3c31;            /* 深褐色鉛筆線條，避免黑色過於死板 */
+  background-color: #faf6f0; 
+  color: #4a3c31;            
   font-size: 19px;
   line-height: 2.2;          /* 大幅加寬行距，手寫字不擠壓 */
   letter-spacing: 2px;       /* 增加字距，讓字體更舒展好讀 */
@@ -25,7 +25,7 @@ body {
 header {
   max-width: 1150px;
   margin: 0 auto 30px auto;
-  border-bottom: 2.5px dotted #a89f91; /* dotted dash 手繪風虛線 */
+  border-bottom: 2.5px dotted #a89f91; /* 虛線 */
   padding: 20px 20px 15px 20px;
 }
 
@@ -42,7 +42,7 @@ header {
   font-size: 2.3rem;
   font-weight: bold;
   text-decoration: none;
-  color: #c85a3c; /* 溫暖的磚紅褐色 */
+  color: #c85a3c;
   display: inline-flex;
   align-items: center;
 }
@@ -52,7 +52,7 @@ header {
   background-color: #ffd8cc;
   color: #4a3c31;
   padding: 3px 10px;
-  border: 3px solid #4a3c31; /* 鉛筆粗邊框 */
+  border: 3px solid #4a3c31; 
   border-radius: 12px 6px 15px 5px / 6px 15px 5px 12px;
   margin-left: 10px;
   font-weight: bold;
@@ -64,10 +64,10 @@ nav {
   flex-wrap: wrap;
 }
 
-/* 圓潤可愛的手寫按鈕導覽 */
+/* 圓潤按鈕導覽 */
 .nav-link, .hand-btn {
   display: inline-block;
-  font-family: inherit;      
+  font-family: inherit;
   letter-spacing: inherit;   
   text-decoration: none;
   color: #4a3c31;
@@ -106,7 +106,7 @@ h2 {
   margin: 0 auto 24px auto;
   color: #385a64;
   text-align: center;
-   align-self: center;
+  align-self: center;
 }
 
 h2::after {
@@ -139,13 +139,13 @@ li {
 
 /* 手繪大橫幅 Banner */
 .hero-box {
-  background-color: #f6f0ea; /* 柔和自然手繪淡褐背景 */
+  background-color: #f6f0ea; 
   padding: 40px;
   margin-bottom: 40px;
   border: 4px solid #4a3c31;
   border-radius: 45px 20px 40px 25px / 20px 45px 20px 40px;
   box-shadow: 0 5px 0 #4a3c31;
-  text-align: center; /* 改為更親民的置中感，與 Title 連接 */
+  text-align: center; 
 }
 
 .hero-title-large {
@@ -169,7 +169,7 @@ li {
   margin: 25px auto 10px auto; /* 置中大插圖 */
 }
 
-/* 2x2 不規則泡泡網格 */
+/* 2x2 不規則網格 */
 .grid-2x2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -177,7 +177,7 @@ li {
   margin: 35px 0;
 }
 
-/* 泡泡框 card 卡片 */
+/* 泡泡框 card */
 .sketch-box {
   padding: 30px 25px;
   border: 4px solid #4a3c31;
@@ -191,10 +191,10 @@ li {
 }
 
 /* 便條紙配色，100% 呼應 image_1.png 的溫馨粉彩 */
-.grid-2x2 .sketch-box:nth-child(1) { background-color: #fef1f1; } /* 柔和淡粉 */
-.grid-2x2 .sketch-box:nth-child(2) { background-color: #f1f7f5; } /* 柔和淡綠 */
-.grid-2x2 .sketch-box:nth-child(3) { background-color: #fef9e7; } /* 柔和淡黃 */
-.grid-2x2 .sketch-box:nth-child(4) { background-color: #fbf0f6; } /* 柔和淡紫 */
+.grid-2x2 .sketch-box:nth-child(1) { background-color: #fef1f1; }
+.grid-2x2 .sketch-box:nth-child(2) { background-color: #f1f7f5; }
+.grid-2x2 .sketch-box:nth-child(3) { background-color: #fef9e7; }
+.grid-2x2 .sketch-box:nth-child(4) { background-color: #fbf0f6; }
 
 .sketch-box:hover {
   transform: translateY(-3px) rotate(-1deg);
@@ -240,7 +240,7 @@ th, td {
 }
 
 th {
-  background-color: #e2f0d9; /* 溫馨淡綠 */
+  background-color: #e2f0d9; 
   color: #4a3c31;
   font-size: 1.3rem;
   font-weight: bold;
@@ -311,20 +311,3 @@ footer {
   background-color: #faf6f0;
 }
 
-/* 手機版調整 */
-@media (max-width: 768px) {
-  .navbar {
-    justify-content: center;
-  }
-  .grid-2x2 {
-    grid-template-columns: 1fr;
-  }
-  .card-content-wrapper {
-    flex-direction: column-reverse;
-    text-align: center;
-  }
-  th, td {
-    padding: 12px;
-    font-size: 1.1rem;
-  }
-}
